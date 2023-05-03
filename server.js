@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const routeFolder = require('./routes')
 
 const app = express();
 const PORT = 9352;
@@ -8,14 +9,18 @@ const PORT = 9352;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// GET route for the homepage
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/public/index.html'));
-});
+app.use(express.static('public'));
+
+app.use('/api', routeFolder)
 
 // GET route for notes page
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/notes.html'));
+});
+
+// GET route for the homepage
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 app.listen(PORT, () =>
@@ -24,11 +29,11 @@ app.listen(PORT, () =>
 
 // Acceptance criteria
 
-// When I clikc on the link to the notes page, 
+// When I click on the link to the notes page, 
 // I am presented with a page with existing notes listed in the left-hand column, 
 // plus empty fields to enter a new note title and the note's text in the right-hand column
 
-// When I enter a new not title and the note's text, 
+// When I enter a new note title and the note's text, 
 // a save icon appears in the nacigation at the top of the page
 
 // When I click on the save icon, 
