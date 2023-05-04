@@ -21,4 +21,4 @@ Once you are on the note screen, you will see 3 distinct areas:
 
 Below are some pictures to show what the app looks like as you use it: </br>
 
-Here is a link to the deployed application: _link goes here_
+Here is a link to the deployed application: https://bootcamp-note-taking-app.herokuapp.com/
