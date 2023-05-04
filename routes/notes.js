@@ -4,6 +4,14 @@ const uuid = require('../helpers/uuid.js')
 
 notes.get('/', (req, res) => {
     console.info(`${req.method} request received for notes`);
+
+    fs.readFile('./db/db.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+        } else {
+            res.json(JSON.parse(data));
+        }
+    });
 });
 
 notes.post('/', (req, res) => {
