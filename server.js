@@ -29,15 +29,5 @@ app.listen(PORT, () =>
 
 // Acceptance criteria
 
-// When I click on the link to the notes page, 
-// I am presented with a page with existing notes listed in the left-hand column, 
-// plus empty fields to enter a new note title and the note's text in the right-hand column
-
-// When I click on the save icon, 
-// the new not I have entered is saved anmd appears in the left-hand column with the other existing notes
-
-// When I click an existing not in the list in the left-hand column, 
+// When I click an existing note in the list in the left-hand column, 
 // that note appears in the right-hand column
-
-// When I click on the write icon in the navigation at the top of the page, 
-// I am presented with empty fields to enter a new note title and the note's text in the right-hand column

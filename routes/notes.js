@@ -52,4 +52,6 @@ notes.post('/', (req, res) => {
     }
 });
 
+// notes.delete('./db/db.json', ) // this is extra credit :/
+
 module.exports = notes;
