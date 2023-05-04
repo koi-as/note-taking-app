@@ -9,8 +9,9 @@ notes.get('/', (req, res) => {
         if (err) {
             console.error(err);
         } else {
+            console.log(data);
             res.json(JSON.parse(data));
-        }
+        };
     });
 });
 
@@ -23,7 +24,7 @@ notes.post('/', (req, res) => {
         const newNote = {
             title,
             text,
-            note_id: uuid()
+            id: uuid()
         };
 
         fs.readFile('./db/db.json',  'utf8', (err, data) => {
@@ -51,7 +52,5 @@ notes.post('/', (req, res) => {
         res.json('Error in posting note');
     }
 });
-
-// notes.delete('./db/db.json', ) // this is extra credit :/
 
 module.exports = notes;
