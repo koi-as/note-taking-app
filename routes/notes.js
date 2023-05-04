@@ -1,5 +1,6 @@
 const notes = require('express').Router();
 const fs = require('fs');
+const uuid = require('../helpers/uuid.js')
 
 notes.get('/', (req, res) => {
     console.info(`${req.method} request received for notes`);
@@ -24,6 +25,11 @@ notes.post('/', (req, res) => {
                 const dataFromFile = JSON.parse(data);
                 dataFromFile.push(newNote);
                 const strigifyData = JSON.stringify(dataFromFile, null, 4);
+                fs.writeFile('./db/db.json', strigifyData, (err) => {
+                    err
+                        ? console.error(err)
+                        : console.log(`Note ${newNote.title} has been written to JSON file`)
+                });
             }
         })
 
