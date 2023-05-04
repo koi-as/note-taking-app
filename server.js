@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const routeFolder = require('./routes')
+const routeFolder = require('./routes');
 
 const app = express();
 const PORT = 9352;
@@ -32,9 +32,6 @@ app.listen(PORT, () =>
 // When I click on the link to the notes page, 
 // I am presented with a page with existing notes listed in the left-hand column, 
 // plus empty fields to enter a new note title and the note's text in the right-hand column
-
-// When I enter a new note title and the note's text, 
-// a save icon appears in the nacigation at the top of the page
 
 // When I click on the save icon, 
 // the new not I have entered is saved anmd appears in the left-hand column with the other existing notes
