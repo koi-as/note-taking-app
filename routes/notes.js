@@ -3,8 +3,6 @@ const fs = require('fs');
 const uuid = require('../helpers/uuid.js')
 
 notes.get('/', (req, res) => {
-    console.info(`${req.method} request received for notes`);
-
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
         if (err) {
             console.error(err);
@@ -16,8 +14,6 @@ notes.get('/', (req, res) => {
 });
 
 notes.post('/', (req, res) => {
-    console.info(`${req.method} request received to create a note`);
-
     const { title, text } = req.body;
 
     if (title && text) {

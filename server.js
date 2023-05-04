@@ -13,14 +13,14 @@ app.use(express.static('public'));
 
 app.use('/api', routeFolder)
 
+// GET route for the homepage
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/index.html'));
+});
+
 // GET route for notes page
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/notes.html'));
-});
-
-// GET route for the homepage
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 app.listen(PORT, () =>

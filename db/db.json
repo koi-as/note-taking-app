@@ -1,22 +1,22 @@
 [
     {
-        "title": "ddd",
-        "text": "ddd",
+        "title": "Welcome!",
+        "text": "This is the note taking app! This is an example note to show you what it will look like!",
         "id": "914c"
     },
     {
-        "title": "Hunter",
-        "text": "Hello",
+        "title": "How to use!",
+        "text": "To use the app, simply type anything into the title and text fields on the right side of the screen! If you need to create a new note, just click the plus button in the top right hand corner!",
         "id": "3dbc"
     },
     {
-        "title": "Type",
-        "text": "In a note",
+        "title": "Save notes!",
+        "text": "After you have written out a title and some text, all you need to do is save! Click the save icon in the top right hand corner next to the plus button! You can't miss it!",
         "id": "1198"
     },
     {
-        "title": "Right here",
-        "text": "Who  knows what to right",
+        "title": "Ready to start?",
+        "text": "Now that you know the basics, you can start making your own notes! Hit that 'new note' button and start typing your heart away :)",
         "id": "5da0"
     }
 ]
