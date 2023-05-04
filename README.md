@@ -20,5 +20,8 @@ Once you are on the note screen, you will see 3 distinct areas:
 </br>
 
 Below are some pictures to show what the app looks like as you use it: </br>
+![Pre Generated Note](./assests/images/preGenNote.png)
+![Blank Note Example](./assests/images/blankNoteEx.png)
+![New Note Example](./assests/images/newNoteEx.png)
 
 Here is a link to the deployed application: https://bootcamp-note-taking-app.herokuapp.com/
